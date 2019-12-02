@@ -117,13 +117,7 @@ random.shuffle(countries)
 
 yesterday = str(datetime.datetime.now().date() - datetime.timedelta(days=1))
 this_month = str(datetime.datetime.now().date() - datetime.timedelta(days=30))
-
-
-# In[ ]:
-
-
-bloomberg,the-times-of-india,the-new-york-times,the-hindu,al-jazeera-english,news24,the-jerusalem-post,bbc_news
-
+two_days_ago = str(datetime.datetime.now().date() - datetime.timedelta(days=2))
 
 # In[117]:
 
@@ -171,7 +165,7 @@ def get_articles(country, source, from_d, to_d, page = 1):
 
 
 if big_fill is True:
-    nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],this_month,yesterday)
+    nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],this_month,two_days_ago)
 else
     nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],yesterday,yesterday)
 
