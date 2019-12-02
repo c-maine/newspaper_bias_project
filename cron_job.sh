@@ -1,0 +1,2 @@
+sudo docker run --name im francescooo/tables_fill
+sudo docker rm im
