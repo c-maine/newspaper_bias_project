@@ -5,7 +5,7 @@ A (periodically) live dashboard exploring the bias of different newspapers aroun
 
 Short description of project
 
- - With this github repository you can create a tool that collects data from newsAPI (https://newsapi.org/) and stores it in an existing AWS Maria DB server; specifically the newspaper source and countries tagged. Following this, the tool visualises the data in a dashboard showing the frequency of country-mentions per newspaper. If you are lucky, this tool will also conduct a sentiment analysis of the countries discussed. 
+ - With this github repository you can create a tool that collects data from NewsAPI (https://newsapi.org/) and stores it in an existing AWS Maria DB server; specifically the newspaper source and countries tagged. Following this, the tool visualises the data in a dashboard showing the frequency of country-mentions per newspaper. If you are lucky, this tool will also conduct a sentiment analysis of the countries discussed. 
 
 
 Steps
@@ -15,7 +15,9 @@ Steps
      a) Enable public availability
      
      b) Ensure security group settings enable access
-  
+
+N.B. This step has already been completed and does not need to be replicated in order to reproduce our database.
+
 2) Clone this repository locally or on an AWS instance
 
 3) Execute setup_all.sh; this file performs the following steps:
@@ -31,6 +33,10 @@ Steps
    e) Sets up a cron job to run tables_fill once per day per newspaper
  
  N.B. This Docker image cannot be edited for the purposes of connecting to another database. 
+
+
+
+
 
 
 
