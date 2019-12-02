@@ -1,6 +1,3 @@
-git pull https://github.com/c-maine/newspaper_bias_project.git
-cd newspaper_bias_project
-
 sudo apt install python-pip
 pip install pymysql
 pip install sqlalchemy

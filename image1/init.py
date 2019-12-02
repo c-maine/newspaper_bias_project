@@ -166,7 +166,7 @@ def get_articles(country, source, from_d, to_d, page = 1):
 
 if big_fill is True:
     nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],this_month,two_days_ago)
-else
+else:
     nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],yesterday,yesterday)
 
 
