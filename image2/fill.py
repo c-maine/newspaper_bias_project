@@ -121,10 +121,6 @@ this_month = str(datetime.datetime.now().date() - datetime.timedelta(days=30))
 
 # In[ ]:
 
-
-bloomberg,the-times-of-india,the-new-york-times,the-hindu,al-jazeera-english,news24,the-jerusalem-post,bbc_news
-
-
 # In[117]:
 
 
