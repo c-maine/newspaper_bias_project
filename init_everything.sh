@@ -39,6 +39,6 @@ sudo docker rm init
 
 #setup a cron job that runs the container that every 5 days inserts in the databse articles from the
 #previous 5 days
-crontab cron_setup
+#crontab cron_setup
 
 
