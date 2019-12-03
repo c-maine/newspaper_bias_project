@@ -8,8 +8,8 @@
 
 import sqlalchemy as sql
 ### create engine to connect
-#database max
-db = sql.create_engine('mysql+pymysql://admin:datawarehousing@database-1.cl6uila8iago.eu-central-1.rds.amazonaws.com:3306/news_db')
+database_address = 'INSERT_YOUR_DATABASE_ADDRESS_HERE'
+db = sql.create_engine(database_address)
 
 #database chloe
 #db = sql.create_engine('mysql+pymysql://admin:datawarehousing@database-2.ce6ggy1gznka.us-east-2.rds.amazonaws.com:3306/dbtest')
