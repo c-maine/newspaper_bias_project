@@ -6,7 +6,9 @@ A dashboard exploring the bias of different newspapers around the world
 Short description of project
 
  - With this github repository you can create a tool that collects data from NewsAPI (https://newsapi.org/) and stores it in an AWS Maria DB server; specifically the newspaper source and countries tagged. Following this, the tool visualises the data in a dashboard showing the frequency of country-mentions per newspaper. If you are lucky, this tool will also conduct a sentiment analysis of the countries discussed. You can connect to the database, eg. using sqlalchemy, via: 
+ 
  database_address = 'mysql+pymysql://admin:datawarehousing@database-1.cl6uila8iago.eu-central-1.rds.amazonaws.com:3306/news_db'
+ 
  db = sql.create_engine(database_address)
 
 
