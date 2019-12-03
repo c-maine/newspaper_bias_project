@@ -33,18 +33,18 @@ In order to reproduce our setup, please follow these steps:
      setup_all.sh (see step 5) in the morning (between 07:00 and 11:00), because otherwise we will run out of tokens for the requests of that day and lose data
      b) You create your own 4 keys for newsAPI and insert them in true_init.py and fill.py 
 
-5) Execute setup_all.sh
+5) Execute init_everything.sh
     this file performs the following steps:
    
    a) Install docker
    
-   b) Create Docker image: tables_init
+   b) Create Docker image: big_fill
      
-   c) Create Docker image: tables_fill
+   c) Create Docker image: daily_fill
    
-   d) Runs tables_init (creates necessary tables and performs initial fill)
+   d) Runs tables_init (creates necessary tables and performs big_fill fill)
   
-   e) Sets up a cron job to run tables_fill once per day per newspaper
+   e) Sets up a cron job to run daily_fill once per day
  
 
 
