@@ -149,7 +149,7 @@ def news_data(countries, sources, from_d, to_d):
         time.sleep(120)
     return news_all, counter_all
 
-def get_articles(country, source, from_d, to_d, page = 1):
+def get_articles(country, source, from_d, to_d, api_key):
     c = 'q='+country+'&'
     s = 'sources='+source+'&'
     url = 'https://newsapi.org/v2/everything?'+s+'sort=relevancy&from='+str(from_d)+'&to='+str(to_d)+'&pagesize=100&lenguage=en&'+c+'apiKey='+api_key

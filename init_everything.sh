@@ -2,7 +2,7 @@ sudo apt install python-pip
 pip install pymysql
 pip install sqlalchemy
 
-python3 clear_aws_tables.py
+python2 clear_aws_tables.py
 
 #Install docker and pull the two images
 sudo apt-get remove docker docker-engine docker.io containerd runc
