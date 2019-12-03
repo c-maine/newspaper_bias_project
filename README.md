@@ -26,14 +26,14 @@ In order to reproduce our setup, please follow these steps:
 
 2) Clone this repository locally or on an AWS EC2 instance
 
-3) Replace the hostname (first line) in true_init.py and fill.py with the hostname and credentials of your database
+3) Replace the database_address in clear_aws_tables.py, true_init.py and fill.py with the database address of your database
 
 4) In order to request data from newsAPI there are 2 options:
      a) You use our existing 4 keys that are specified in fill.py and true_init.py. If you do so, please make sure to run 
      setup_all.sh (see step 5) in the morning (between 07:00 and 11:00), because otherwise we will run out of tokens for the requests of that day and lose data
      b) You create your own 4 keys for newsAPI and insert them in true_init.py and fill.py 
 
-5) Execute setup_all.sh (DO NOT DO THIS UNLESS YOU DID STEP 3 and 4!!!)
+5) Execute setup_all.sh
     this file performs the following steps:
    
    a) Install docker
