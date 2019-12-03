@@ -1,4 +1,48 @@
 # A newspaper_bias_project
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxdoc;;;,,;llldkkOOOOOkkkkkkkkkkOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkxolllllc,..    ...;lxOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkkkkkkkkkOkl,........         ..,;coxOOOOOOOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkkkkkkkkkd:.        ..            ..,lkOOOOOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkkkkkOkxl.           ..        .. ....cxOOOOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkkkkOd;.              ..       .   ....ckOOOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkkOx:.                          .. .....oOOOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkOk;                     .....  .........ckOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkOkc.               .......'''......  ... .lOOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkkc.             ...'',,;::cclolccc:,......:kOOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkOl.           .....,;:cccccloddddxxddc,.....ckOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkk:          ......',;:clcclloddxxxxkxdoc'.. .oOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkk:          .....'',;::clllllodxxxkkxxdo:.. 'xOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkc          .....'',;::cloooooddddxxxxddo,. .dOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkc.         ......'',,,;clooooolc:c:cloooc...oOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkOl.         ............,;:cllodc;,'..',::'.'x0OOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkOx'        ...  ...',,,,;;::coxkdool:;::cc;,:dOOOOOOOOOOOOOOOOOOO
+kkkkkkkkkkkkkkkkk;       ..''.',,',::;;;;;,';dkxollol:cooclddxkOOOOOOOOOOOOOOOOO
+kkkkkkxkkkkkkkkkkx;    ..',;;,''.':l:,;,,,,,;lxxdloxdcclocokxkOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxkkkkkkkkc.    ....','..';:::;,,'''':okkdlooodddoxOkOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxkkkkkx;...    ..';'.,;:ccc:,'....,ldxkkxxxkkxxkkkOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxkkkkx;.....  ...,;,,:cccc;''....,cdkkkkkkkkkxdxkOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxkkkk:...... ....',;;::::;'.....,cdkkkxxxkkkxdokOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxkkkd,.....  .....',;:::,.......,collxkkkkxxookOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxxkkko,....   .....',;::,....  ..,'';cddxkxo:oOOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxxxkkkd;...     ....','.....   .''.''.,,:ol,,dOOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxxxxxkkxc'',.      ....  ......,:coool:;,:;.,x0OOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxxxxxxkkkxxkc.      .. ......',,,;cllool::,.;k0OOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxxxxxxxkkkkOx'      .........';coodxxdddl;..cOOOOOOOOOOOOOOOOOOOOO
+xxxxxxxxxxxxxxxxxxxxxkkkkkk:.       ........';cccclodo:'.'x0OOOOOOOOOOOOOOOOOOOO
+xxxxxxxxdxxxxxxxxxxxxkkkkkOo.       ...''''......;ldo:,..:O0OOOOOOOOOOOOOOOOOOOO
+xxxxxxxddddxxxxxxxxxxkkkkkd:...      ..'',;,,,,;clll:,...'lk0OOOOOOOOOOOOOOOOOOO
+xdddddddddddxxxxxxxxxkkko,. ....       ......',,,;,''.'l:..lO0OOOOOOOOOOOOOOOOOO
+dddddddddddxxxxxxxxxxkxl.   ......          .........:oxl. 'x0OOOOOOOOOOOOOOOOOO
+dddddddddddxxxxxxxxxkxc..    ...................'',:oxxxo, .o00OO00OOOOOOOOOOOOO
+ddddddddddddxxxxxxxdo:,.     ..............,:cloddxxxxxxo, .cO0OO0K000000OOOOOOO
+ddddddddddddddooolc;,,,'.    ............'';cloodxxxxxxdl'  :k00O0K0OKKK00000OOO
+dddddddooooolllc::,',,:,.    .....'''..'',;:cloddxxxdddl;...;x00OO00k0KK00000000
+doooollloloddoccl:,',,c:.    ......''''',;;:cloddddddol:,..',o00OO0KkOKKKKKK000O
+lllloooddooddlcol:,',,cc...........'',,,;;;:cloodddoolc:'..,'l000OOK0k0XKKKKK000
+
+
+
+
 Brought to you by Max, Francesco & Chloe
 
 A dashboard exploring the bias of different newspapers around the world 
