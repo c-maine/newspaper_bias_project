@@ -45,11 +45,6 @@ In order to reproduce our setup, please follow these steps:
    d) Runs tables_init (creates necessary tables and performs big_fill fill)
   
    e) Sets up a cron job to run daily_fill once per day
- 
-
-
-
-
 
 
 Additional information
@@ -60,6 +55,17 @@ Additional information
   - Countries table, containing country, country name, population, number of official languages, english language (present as official language TRUE/FALSE), area, capital, region and subregion
   - Dates table containing date (date published)
 
-5) b) & c)  Initially we used the API EventRegistry (https://eventregistry.org) and we queried for all articles for a day for specific newspapers; we filtered for articles with country tags and additionally searched for names of countries in the article title. This is very inefficient because EventRegistry only has country tags for few articles and few newspapers and we were quickly running out of tokens. For this reason, we switched to NewsAPI to enable us to query per newspaper per country and count directly in the SQL query. This results in a greater number of SQL queries however every article we receive has a country tag. Instead of saving all the complete articles and their metadata, we only need to store the counts. We however still store a subset of complete articles in the hope of later performing the sentiment analysis. Nevertheless, the Eventregistry database is still up and we continue collecting data. The corresponding files, a Readme with information on how to connect to the database and a short description of the files can be found in the folder Eventregistry.
+5) b) & c) The big_fill image is designed to:
+           i) Get all countries information from the restcountries_py Python package and write this information in the 
+           countries_tab_news table in the database.
+           ii) For each newspaper in our newspapers list, and for each country, send a request to NEWS API for all the articles 
+           published in the last 30 days that contain the country name as a keyword. From each request, we extract the total 
+           number of results and a subset of 25 complete articles, that include article title, url, and description. We organize 
+           this data in two pandas dataframes, one containing only count information and the other the articles information.
+           The count information is written in the count_tab_news table, the articles in the articles_tab_news table in the 
+           database.
+The daily_fill image repeats step ii) of the big_fill, but limits the request to the previous day.
+
+Initially we used the API EventRegistry (https://eventregistry.org) and we queried for all articles for a day for specific newspapers; we filtered for articles with country tags and additionally searched for names of countries in the article title. This is very inefficient because EventRegistry only has country tags for few articles and few newspapers and we were quickly running out of tokens. For this reason, we switched to NewsAPI to enable us to query per newspaper per country and count directly in the SQL query. This results in a greater number of SQL queries. However, every article we receive has a country tag. Nevertheless, the Eventregistry database is still up and we continue collecting data. The corresponding files, a Readme with information on how to connect to the database and a short description of the files can be found in the folder Eventregistry.
 
 3)  e)  As NewsAPI limits requests to 500 per day and 250 per 12h, we created several accounts and run one cron job per newspaper per day.
