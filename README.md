@@ -14,7 +14,7 @@ Short description of project
 
 
 
-Steps in order to reproduce our setup:
+In order to reproduce our setup, please follow these steps:
 
 1) Set up an AWS MariaDB RDS instance:
      
