@@ -17,6 +17,7 @@ import sqlalchemy as sql
 import restcountries_py.restcountry as rc
 import random
 import datetime
+import time
 
 
 # In[177]:
@@ -28,7 +29,7 @@ db = sql.create_engine(database_address)
 # In[164]:
 
 
-big_fill = False
+big_fill = True
 
 
 # In[178]:
@@ -108,7 +109,7 @@ drop_countries = ['British Indian Ocean Territory','United States Minor Outlying
                      'Wallis and Futuna']
 for country in drop_countries:
     countries.remove(country)
-countries += ['USA','England']
+countries += ['US','UK']
 random.shuffle(countries)
 
 
@@ -117,9 +118,7 @@ random.shuffle(countries)
 
 yesterday = str(datetime.datetime.now().date() - datetime.timedelta(days=1))
 this_month = str(datetime.datetime.now().date() - datetime.timedelta(days=30))
-
-
-# In[ ]:
+two_days_ago = str(datetime.datetime.now().date() - datetime.timedelta(days=2))
 
 # In[117]:
 
@@ -134,17 +133,20 @@ def news_data(countries, sources, from_d, to_d):
             api_key = 'ab6f772a27764e2eafc9141168cc30ba'
         if ind == 2:
             api_key = '2407212e5e6744cc8c2f317d432e2594'
+        if ind == 3:
+            api_key = '99efd57d67df427380ae931740fd5d35'
         for country in countries:
             response, count = get_articles(country, source, from_d, to_d, api_key)
             counter_all.append([source,country, count])
-            if country == 'USA':
+            if country == 'US':
                 country = 'United States'
-            if country == 'England':
+            if country == 'UK':
                 country = 'United Kingdom'
             if country in news_all.keys():
                 news_all[country] += response
             else:
                 news_all[country] = response
+        time.sleep(120)
     return news_all, counter_all
 
 def get_articles(country, source, from_d, to_d, page = 1):
@@ -167,9 +169,9 @@ def get_articles(country, source, from_d, to_d, page = 1):
 
 
 if big_fill is True:
-    nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],this_month,yesterday)
+    nw2, contatore2 = news_data(countries,['the-new-york-times','al-jazeera-english','news24','the-hindu'],this_month,two_days_ago)
 else:
-    nw2, contatore2 = news_data(countries,['bbc-news','al-jazeera-english','news24'],yesterday,yesterday)
+    nw2, contatore2 = news_data(countries,['the-new-york-times','al-jazeera-english','news24','the-hindu'],yesterday,yesterday)
 
 
 # In[140]:

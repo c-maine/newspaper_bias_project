@@ -37,8 +37,7 @@ docker build -t docks/daily_fill .
 sudo docker run --name init docks/big_fill
 sudo docker rm init
 
-#setup a cron job that runs the container that every 5 days inserts in the databse articles from the
-#previous 5 days
-#crontab cron_setup
+#setup a cron job that runs the container that every day inserts in the databse articles from the previous day
+crontab cron_setup
 
 

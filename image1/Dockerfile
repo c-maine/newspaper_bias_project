@@ -4,5 +4,5 @@ RUN pip install pymysql sqlalchemy country_list pandas restcountries_py datetime
 
 ADD . .
 
-CMD [ "python", "./init.py" ]
+CMD [ "python", "./true_init.py" ]
 
