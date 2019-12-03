@@ -2,7 +2,6 @@
 
 Brought to you by Max, Francesco & Chloe
 
-A dashboard exploring the bias of different newspapers around the world 
 
 Short description of project
 
