@@ -9,10 +9,7 @@
 import sqlalchemy as sql
 ### create engine to connect
 #database max
-db = sql.create_engine('mysql+pymysql://admin:datawarehousing@database-1.cl6uila8iago.eu-central-1.rds.amazonaws.com:3306/news_db')
-
-#database chloe
-#db = sql.create_engine('mysql+pymysql://admin:datawarehousing@database-2.ce6ggy1gznka.us-east-2.rds.amazonaws.com:3306/dbtest')
+db = sql.create_engine('YOUR_DATABASE_ADDRESS')
 
 # Open the .sql file
 sql_file = open('create_new_tables.sql','r')
