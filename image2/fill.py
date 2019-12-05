@@ -4,7 +4,7 @@
 # In[175]:
 
 
-database_address = 'mysql+pymysql://admin:datawarehousing@database-1.cl6uila8iago.eu-central-1.rds.amazonaws.com:3306/news_db'
+database_address = 'YOUR_DATABASE_ADDRESS'
 
 
 # In[176]:
