@@ -8,11 +8,9 @@
 
 import sqlalchemy as sql
 ### create engine to connect
+
 database_address = 'INSERT_YOUR_DATABASE_ADDRESS_HERE'
 db = sql.create_engine(database_address)
-
-#database chloe
-#db = sql.create_engine('mysql+pymysql://admin:datawarehousing@database-2.ce6ggy1gznka.us-east-2.rds.amazonaws.com:3306/dbtest')
 
 # Open the .sql file
 sql_file = open('create_new_tables.sql','r')
