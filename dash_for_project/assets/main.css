@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&display=swap');
+
+body {
+  font-weight: 300;
+  font-family: "Raleway", Helvetica, sans-serif;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+.layout {
+  width: 85%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.plots {
+background-color: GREY;
+float: center;
+padding: 30px;}
+
+.title {
+  font-size: 3em;
+  margin: 1.5em 0 0.3em 0;
+}
+
+.white_headers{
+color: white,
+font-size: 2em
+}
+
+.subtitle {
+  font-size: 1em;
+  margin: 0.5em 0 0.3em 0;
+}
+
+#access {
+  margin-bottom: 5px; /* or whatever */
+}
