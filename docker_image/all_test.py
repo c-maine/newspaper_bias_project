@@ -11,6 +11,7 @@ import os
 from pathlib import Path  # python3 only
 
 def c_search():
+    #create list of dictionaries with countries info
     all_countries = []
     for country in rc.find_all():
         country_dict = {}
@@ -58,7 +59,6 @@ def create_tabs(db):
 
 def get_countries_df():
     ## get list of dicionaries
-    all_countries = rc.find_all()
     country_list = c_search()
     # convert it to dataframe
     country_df=pd.DataFrame(country_list)
@@ -177,7 +177,9 @@ def write_articles(main_df,engine):
 
 
 def fill_tabs(db, newspapers, api_keys, big_fill = False):
+    #get dataframes with articles and articles counts
     articles_data, count_data = get_tables(newspapers, api_keys, big_fill)
+    #write them in the database
     write_main_to_df(count_data, db)
     write_articles(articles_data, db)
 
@@ -189,7 +191,7 @@ def start():
     api_keys = os.getenv("API").split(' ')
     database_address = os.getenv("ADDRESS")
     db = sql.create_engine(database_address)
-    newspapers = ['the-new-york-times','al-jazeera-english','news24','the-hindu']
+    newspapers = os.getenv("NEWSPAPERS").split(' ')
 # reads tables in the database    
     tabs = db.execute('SHOW TABLES').fetchall()
         
