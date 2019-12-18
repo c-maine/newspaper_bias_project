@@ -28,32 +28,18 @@ def c_search():
 
 
 def create_tabs(db):
-    sql_file = open('/home/useful_files/create_new_tables.sql','r')
-# Create an empty command string
-    sql_command = ''
-    
-    # Iterate over all lines in the sql file
-    for line in sql_file:
-        # Ignore commented lines
-        if not line.startswith('--') and line.strip('\n'):
-            # Append line to the command string
-            sql_command += line.strip('\n')
-    
-            # If the command string ends with ';', it is a full statement
-            if sql_command.endswith(';'):
-                # Try to execute statement and commit it
-                try:
-                    db.execute(str(sql_command))
-                    #db.commit()
-    
-                # Assert in case of error
-                except:
-                    print('Ops')
-                    
-    
-                # Finally, clear command string
-                finally:
-                    sql_command = ''
+    fd = open('/home/useful_files/create_new_tables.sql','r')
+    sql_file = fd.read()
+    fd.close()
+    # split file into single commands
+    sql_commands = sql_file.split(';')
+    # Execute every command separately in order to be able to keep track of errors
+    for command in sql_commands:
+        # skip errors and report them
+        try:
+            db.execute(command)
+        except(OperationalError, msg):
+            print("Command skipped: ", msg)
 
 
 def get_countries_df():
