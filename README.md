@@ -5,13 +5,15 @@ Brought to you by Max, Francesco & Chloe
 
 Short description of project
 
- - With this github repository you can create a tool that collects data from NewsAPI (https://newsapi.org/) and stores it in a Maria DB server. In our setup we created an AWS RDS as MariaDB server and collect the data by requesting from newsAPI on a daily basis. This requests are executed by a docker-image that is run daily via cron-jobs on an EC2 instance. See architecture pdf for a very graphic representation of the architecture.
+ - With this github repository you can create a tool that collects data from NewsAPI (https://newsapi.org/), stores it in a Maria DB server and displays it on a dashboard. In our setup we created an AWS RDS as MariaDB server and collect the data by requesting from newsAPI on a daily basis. This requests are executed by a docker-image that is run daily via cron-jobs on an EC2 instance. See architecture pdf for a very graphic representation of the architecture.
  The data collected is visualised in a dashboard in order to show the frequency of country-mentions per newspaper. You can connect to the database, eg. using sqlalchemy, via: 
  
  database_address = 'mysql+pymysql://admin:datawarehousing@database-1.cl6uila8iago.eu-central-1.rds.amazonaws.com:3306/news_db'
  
  db = sql.create_engine(database_address)
 
+
+The dashboard will be visible under the public DNS of your EC2 instance.
 
 
 
