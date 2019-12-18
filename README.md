@@ -27,7 +27,7 @@ In order to reproduce our setup, please follow these steps:
 
 2) Clone this repository locally or on an AWS EC2 instance
 
-3) Replace the database_address in clear_aws_tables.py, true_init.py and fill.py with the database address of your database
+3) Replace the database_address and api_keys in the .env file in useful_files folder
 
 4) In order to request data from newsAPI there are 2 options:
      a) You use our existing 4 keys that are specified in fill.py and true_init.py. If you do so, please make sure to run 
@@ -39,13 +39,11 @@ In order to reproduce our setup, please follow these steps:
    
    a) Install docker
    
-   b) Create Docker image: big_fill
-     
-   c) Create Docker image: daily_fill
+   b) Pull our docker image 
    
-   d) Runs tables_init (creates necessary tables and performs big_fill fill)
+   d) Runs the news_project image once
   
-   e) Sets up a cron job to run daily_fill once per day
+   e) Sets up a cron job to run news_project once per day
 
 
 Additional information
@@ -56,7 +54,7 @@ Additional information
   - Countries table, containing country, country name, population, number of official languages, english language (present as official language TRUE/FALSE), area, capital, region and subregion
   - Dates table containing date (date published)
 
-5) b) & c) The big_fill image is designed to:
+5) b) & c) The news_project image checks if our tables already exist in the database. If they don't it: 
            i) Get all countries information from the restcountries_py Python package and write this information in the 
            countries_tab_news table in the database.
            ii) For each newspaper in our newspapers list, and for each country, send a request to NEWS API for all the articles 
@@ -65,8 +63,8 @@ Additional information
            this data in two pandas dataframes, one containing only count information and the other the articles information.
            The count information is written in the count_tab_news table, the articles in the articles_tab_news table in the 
            database.
-The daily_fill image repeats step ii) of the big_fill, but limits the request to the previous day.
-
+           If the tables are already presents, it just repeats step ii) with newspaper data from the previous day. 
+             
 Initially we used the API EventRegistry (https://eventregistry.org) and we queried for all articles for a day for specific newspapers; we filtered for articles with country tags and additionally searched for names of countries in the article title. This is very inefficient because EventRegistry only has country tags for few articles and few newspapers and we were quickly running out of tokens. For this reason, we switched to NewsAPI to enable us to query per newspaper per country and count directly in the SQL query. This results in a greater number of SQL queries. However, every article we receive has a country tag. Nevertheless, the Eventregistry database is still up and we continue collecting data. The corresponding files, a Readme with information on how to connect to the database and a short description of the files can be found in the folder Eventregistry.
 
-3)  e)  As NewsAPI limits requests to 500 per day and 250 per 12h, we created several accounts and run one cron job per newspaper per day.
+3)  e)  As NewsAPI limits requests to 500 per day and 250 per 12h, we created several accounts and run the requests for different newspaper with different api keys.
