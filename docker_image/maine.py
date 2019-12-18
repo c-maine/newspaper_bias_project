@@ -30,7 +30,7 @@ def c_search():
 
 
 def create_tabs(db):
-    fd = open('/home/useful_files/create_new_tables.sql','r')
+    fd = open('/home/create_new_tables.sql','r')
     sql_file = fd.read()
     fd.close()
     # split file into single commands
@@ -173,7 +173,7 @@ def fill_tabs(db, newspapers, api_keys, big_fill = False):
 
 def start():
 #main function, reads api keys, database address, and newspapers of interest from the .env file
-    env_path = Path('/home/useful_files')/ '.env'
+    env_path = Path('/home')/ '.env'
     load_dotenv(dotenv_path=env_path)
     api_keys = os.getenv("API").split(' ')
     database_address = os.getenv("ADDRESS")

@@ -2,8 +2,6 @@ sudo apt install python-pip
 pip install pymysql
 pip install sqlalchemy
 
-#python2 clear_aws_tables.py
-
 #Install docker and pull the two images
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
@@ -27,14 +25,13 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
-cd docker_image
-docker build -t francescooo/news_project .
+#cd docker_image
+docker pull francescooo/news_project
 
 #run docker and then remove container that fills the tables with articles from the last 30 days
-sudo docker run --name init francescooo/news_project
-sudo docker rm init
+sudo docker run -v /home/ubuntu/newspaper_bias_project/useful_files:/home --name im --rm francescooo/news_project
 
-cd ../useful_files
+cd ./useful_files
 #setup a cron job that runs the container that every day inserts in the databse articles from the previous day
 crontab cron_setup
 

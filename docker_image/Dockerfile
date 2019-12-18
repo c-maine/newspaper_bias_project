@@ -5,5 +5,5 @@ RUN pip install -U python-dotenv
 
 ADD . .
 
-CMD [ "python", "./true_init.py" ]
+CMD [ "python", "./maine.py" ]
 
