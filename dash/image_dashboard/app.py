@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 from dotenv import load_dotenv
-from pathlib import path
+from pathlib import Path
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
