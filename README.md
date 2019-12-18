@@ -27,7 +27,7 @@ In order to reproduce our setup, please follow these steps:
 
 2) Clone this repository locally or on an AWS EC2 instance
 
-3) Replace the database_address and api_keys in the .env file in useful_files folder
+3) Replace the database_address and api_keys in the .env file in useful_files folder and ALSO in the dash/assets folder
 
 4) In order to request data from newsAPI there are 2 options:
      a) You use our existing 4 keys that are specified in fill.py and true_init.py. If you do so, please make sure to run 
