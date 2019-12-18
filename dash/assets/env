@@ -1,0 +1,3 @@
+ADDRESS="mysql+pymysql://admin:datawarehousing@database-1.cl6uila8iago.eu-central-1.rds.amazonaws.com:3306/news_db"
+API = "ab6f772a27764e2eafc9141168cc30ba f9a885b868ab4d72bf3cc50ee2259a89 2407212e5e6744cc8c2f317d432e2594 99efd57d67df427380ae931740fd5d35"
+NEWSPAPERS = "the-new-york-times al-jazeera-english news24 the-hindu"
