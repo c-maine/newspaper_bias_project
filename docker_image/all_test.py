@@ -2,6 +2,7 @@ import requests
 from country_list import countries_for_language
 import pandas as pd
 import sqlalchemy as sql
+from sqlalchemy import exc
 import restcountries_py.restcountry as rc
 import random
 import datetime
@@ -38,17 +39,18 @@ def create_tabs(db):
         # skip errors and report them
         try:
             db.execute(command)
-        except(OperationalError, msg):
-            print("Command skipped: ", msg)
+        except exc.SQLAlchemyError:
+            print("Command skipped: ")
+            print(command)
 
 
 def get_countries_df():
-    ## get list of dicionaries
+    # get list of dicionaries
     all_countries = rc.find_all()
     country_list = c_search()
     # convert it to dataframe
     country_df=pd.DataFrame(country_list)
-    ## drop two irrelevant countries with string encoding issues
+    # drop two irrelevant countries with string encoding issues
     country_df=country_df.drop(index=[79,146])
     
     return country_df
