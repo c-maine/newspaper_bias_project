@@ -38,4 +38,4 @@ crontab cron_setup
 cd ../dash/image_dashboard
 sudo docker build -t francescooo/dash_server .
 
-sudo docker run -v /home/ubuntu/newspaper_bias_project/dash_for_project/assets:/home/assets -p 80:8050 --name dash -d francescooo/dash_server
+sudo docker run -v /home/ubuntu/newspaper_bias_project/dash/assets:/home/assets -p 80:8050 --name dash -d francescooo/dash_server
