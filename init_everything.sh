@@ -27,17 +27,14 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
-cd image1
-docker build -t francescooo/big_fill .
-
-cd ../image2
-docker build -t francescooo/daily_fill .
+cd docker_image
+docker build -t francescooo/news_project .
 
 #run docker and then remove container that fills the tables with articles from the last 30 days
-sudo docker run --name init francescooo/big_fill
+sudo docker run --name init francescooo/news_project
 sudo docker rm init
 
-cd ../
+cd ../useful_files
 #setup a cron job that runs the container that every day inserts in the databse articles from the previous day
 crontab cron_setup
 
