@@ -1,9 +1,6 @@
 # A newspaper_bias_project
 
-Brought to you by Max, Francesco & Chloe
-
-
-Short description of project
+**Short description of project**
 
  - With this github repository you can create a tool that collects data from NewsAPI (https://newsapi.org/) and stores it in a Maria DB server. In our setup we created an AWS RDS as MariaDB server and collect the data by requesting from newsAPI on a daily basis. This requests are executed by a docker-image that is run daily via cron-jobs on an EC2 instance. See architecture pdf for a very graphic representation of the architecture.
  The data collected will eventually be visualised in a dashboard in order to show the frequency of country-mentions per newspaper and perhaps also a sentiment analysis of the content. You can connect to the database, eg. using sqlalchemy, via: 
@@ -13,7 +10,7 @@ Short description of project
  db = sql.create_engine(database_address)
 
 
-
+**Instructions**
 
 In order to reproduce our setup, please follow these steps:
 
@@ -48,7 +45,7 @@ In order to reproduce our setup, please follow these steps:
    e) Sets up a cron job to run daily_fill once per day
 
 
-Additional information
+**Additional information**
 
 1) The structure of the data in the AWS Maria DB is set up with the following tables:
   - Articles table containing article ID, title, URL, description. The articles table references all other tables. 
